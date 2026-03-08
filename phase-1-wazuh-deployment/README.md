@@ -214,7 +214,7 @@ The output below confirms the update and upgrade completed without errors:
 
 To reduce system overhead and minimize the attack surface, unnecessary snap packages were reviewed and removed. This keeps the server profile lightweight and reduces background services competing for the limited 4GB RAM allocation:
 
-<img src="screenshots/ubuntu/usless_snaps.png" width="800">
+<img src="screenshots/ubuntu/useless_snaps.png" width="800">
 
 ### 6.3 Firewall Baseline Configuration (UFW)
 
@@ -677,6 +677,8 @@ The environment provides a solid and documented foundation for advanced detectio
 <p align="center">
   <sub>
     Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/kripy17">Krish Patel</a><br><br>
-    Phase 1: SIEM Infrastructure & Endpoint Validation ✅ &nbsp;|&nbsp; Phase 2: Windows + Sysmon Integration 🔄 &nbsp;|&nbsp; Phase 3: Network IDS 📋
+    <a href="../phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;|&nbsp;
+    <a href="../phase-2-windows-sysmon">Phase 2: Windows + Sysmon</a> ✅ &nbsp;|&nbsp;
+    <a href="../phase-3-attack-simulation">Phase 3: Attack Simulation</a> 📋
   </sub>
 </p>
