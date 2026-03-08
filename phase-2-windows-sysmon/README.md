@@ -44,6 +44,16 @@
 
 </details>
 
+<details open>
+<summary><strong>📊 Reflection & Summary</strong></summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;`04` [Telemetry Pipeline](#4-telemetry-pipeline)  
+&nbsp;&nbsp;&nbsp;&nbsp;`05` [Lessons Learned](#5-lessons-learned)  
+&nbsp;&nbsp;&nbsp;&nbsp;`06` [Known Limitations](#6-known-limitations)  
+&nbsp;&nbsp;&nbsp;&nbsp;`07` [Phase Summary](#7-phase-summary)  
+
+</details>
+
 ---
 
 ## 1. Project Overview
@@ -314,10 +324,108 @@ This telemetry foundation will be used in **Phase 3** to simulate real attack te
 
 ---
 
+## 4. Telemetry Pipeline
+
+The diagram below illustrates the complete log flow established in this phase — from raw system activity on the Windows endpoint through to visible, searchable events in the Wazuh Dashboard.
+
+```
+┌─────────────────────────────────────────────┐
+│            Windows 10 Endpoint              │
+│                                             │
+│  System Activity                            │
+│  (process launches, network connections,    │
+│   registry changes, file writes)            │
+│              │                              │
+│              ▼                              │
+│  Sysmon (SwiftOnSecurity config)            │
+│  Windows Event Log Channels                 │
+│              │                              │
+│              ▼                              │
+│  Wazuh Agent                                │
+│  (collects + forwards logs)                 │
+└──────────────────┬──────────────────────────┘
+                   │
+                   │  Port 1514 (NAT Network)
+                   │
+┌──────────────────▼──────────────────────────┐
+│            Ubuntu SOC Server                │
+│                                             │
+│  Wazuh Manager                              │
+│  (receives + analyses events)               │
+│              │                              │
+│              ▼                              │
+│  Wazuh Indexer (OpenSearch)                 │
+│  (indexes + stores events)                  │
+│              │                              │
+│              ▼                              │
+│  Wazuh Dashboard                            │
+│  (visualise, search, alert)                 │
+└─────────────────────────────────────────────┘
+```
+
+Every Sysmon event generated on the Windows endpoint travels this path in near real time — making the full endpoint activity visible and searchable from the SOC server.
+
+---
+
+## 5. Lessons Learned
+
+### Windows Monitoring Is a Different Beast
+
+Coming from Phase 1 where the monitored endpoint was Kali Linux, onboarding a Windows machine introduced a fundamentally different telemetry landscape. Linux monitoring relies heavily on auth logs, syslog, and audit frameworks. Windows introduces Event IDs, registry activity, process creation chains, and a much richer — but also noisier — log ecosystem.
+
+### Sysmon Knowledge Applied From Theory to Practice
+
+Prior exposure to Sysmon through TryHackMe labs provided a solid theoretical foundation — understanding what Event ID 1, 3, 11, and 13 represent before touching the tool made configuration significantly more straightforward. This phase was the first time that knowledge was applied in a real, self-built environment rather than a guided exercise.
+
+### This Phase Was About Pipeline, Not Detection
+
+It is important to be clear about what Phase 2 is and is not. Sysmon was configured and validated — but not yet used for active detection or investigation. The objective here was to establish a reliable, high-quality telemetry pipeline. The actual detection work — running attacks, generating alerts, investigating events — comes in Phase 3.
+
+### The Moment It Clicked
+
+Seeing live Windows Sysmon events appear in the Wazuh Dashboard in real time — process names, command lines, timestamps — made the value of the full pipeline tangible. It is one thing to understand it conceptually. Watching it work end-to-end is different.
+
+---
+
+## 6. Known Limitations
+
+| Limitation | Detail |
+|---|---|
+| Sysmon not yet used for detection | Configuration validated but no attack simulation performed in this phase |
+| SwiftOnSecurity config filters aggressively | Some low-level events intentionally excluded — may miss edge cases |
+| Single Windows endpoint | No coverage of lateral movement between multiple Windows machines |
+| Resource constraints | Running 4GB Windows VM + SOC server on 8GB host leaves limited headroom for log volume spikes |
+| No custom Wazuh rules | Detection relies entirely on built-in Wazuh rules — no tuning performed yet |
+
+These limitations are deliberate scope decisions for this phase, not gaps. Each will be addressed progressively across Phase 3 and future lab expansions.
+
+---
+
+## 7. Phase Summary
+
+| Task | Status |
+|---|---|
+| Windows VM provisioned and configured | ✅ |
+| Wazuh SOC server services verified | ✅ |
+| Required ports confirmed listening | ✅ |
+| Windows agent registered via Wazuh GUI | ✅ |
+| Agent service started and confirmed active | ✅ |
+| Basic Windows telemetry flow verified | ✅ |
+| SwiftOnSecurity Sysmon config downloaded | ✅ |
+| Sysmon configuration applied | ✅ |
+| Sysmon events verified in Event Viewer | ✅ |
+| Sysmon telemetry confirmed in Wazuh Dashboard | ✅ |
+| Full endpoint-to-SIEM pipeline operational | ✅ |
+
+Phase 2 is complete. The SOC lab now has a fully operational Windows endpoint with Sysmon telemetry flowing into the Wazuh SIEM — ready for attack simulation and detection validation in Phase 3.
+
+---
+
 <p align="center">
   <sub>
     Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/kripy17">Krish Patel</a><br><br>
-    <a href="../phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;|&nbsp; <a href="../phase-2-windows-sysmon
-">Phase 2: Windows + Sysmon ✅ &nbsp;|&nbsp; Phase 3: Attack Simulation 📋
+    <a href="../phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;|&nbsp;
+    <a href="../phase-2-windows-sysmon">Phase 2: Windows + Sysmon</a> ✅ &nbsp;|&nbsp;
+    <a href="../phase-3-attack-simulation">Phase 3: Attack Simulation</a> 📋
   </sub>
 </p>
