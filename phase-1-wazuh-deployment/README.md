@@ -528,11 +528,11 @@ sudo su invaliduser
 
 The terminal output below shows the failed attempts as they occurred on the endpoint:
 
-<img src="screenshots/attacks/kali/auth_failed_generation.png" width="800">
+<img src="screenshots/attacks/auth_failed_generation.png" width="800">
 
 In the Wazuh Dashboard, alerts were generated for the `kali-linux` agent within seconds. The screenshot below confirms the rule was triggered, the correct agent was attributed, a severity level was assigned, and the timestamps align accurately with when the attempts were made:
 
-<img src="screenshots/attacks/dashboard/auth_failed_alert.png" width="800">
+<img src="screenshots/attacks/auth_failed_alert.png" width="800">
 
 ---
 
@@ -550,11 +550,11 @@ exit
 
 The execution is shown below as it appeared on the Kali endpoint:
 
-<img src="screenshots/attacks/kali/privilege_escalation_generation.png" width="800">
+<img src="screenshots/attacks/privilege_escalation_generation.png" width="800">
 
 The Wazuh Dashboard generated corresponding alerts for the privileged activity. The screenshot below shows the alert detail, including the rule triggered, the severity assigned, and the agent attribution:
 
-<img src="screenshots/attacks/dashboard/privilege_escalation_alert.png" width="800">
+<img src="screenshots/attacks/privilege_escalation_alert.png" width="800">
 
 ---
 
@@ -570,11 +570,11 @@ sudo apt install nmap -y
 
 The terminal output below shows the installation as it ran on the endpoint:
 
-<img src="screenshots/attacks/kali/nmap_install_generation.png" width="800">
+<img src="screenshots/attacks/nmap_install_generation.png" width="800">
 
 Wazuh logged the package activity and surfaced it as a system event in the dashboard. The screenshot below confirms the event was captured, indexed, and correctly attributed to the `kali-linux` agent:
 
-<img src="screenshots/attacks/dashboard/tool_installation_alert.png" width="800">
+<img src="screenshots/attacks/tool_installation_alert.png" width="800">
 
 ---
 
@@ -584,11 +584,11 @@ Wazuh logged the package activity and surfaced it as a system event in the dashb
 
 The `/etc/hosts` file was modified to simulate an unauthorized change to a critical system file:
 
-<img src="screenshots/attacks/kali/file_modification_generation.png" width="800">
+<img src="screenshots/attacks/file_modification_generation.png" width="800">
 
 Wazuh FIM detected the change and generated an alert. The screenshot below shows the FIM alert in the dashboard, confirming the exact file path was monitored, the change was detected in near real-time, and the event was correctly attributed to the `kali-linux` agent with an accurate timestamp:
 
-<img src="screenshots/attacks/dashboard/file_integrity_alert.png" width="800">
+<img src="screenshots/attacks/file_integrity_alert.png" width="800">
 
 ---
 
