@@ -149,7 +149,7 @@ Output   →  5 incident reports · MITRE ATT&CK mappings · detection gap analy
 │  └─────────────────────┘      │    Linux Endpoint    │       │
 │                               │    Wazuh Agent       │       │
 │                               └──────────────────────┘       │
-│                  VMnet8 · NAT · 192.168.1.0/24                │
+│                  VMnet8 · NAT · 192.168.1.0/24               │
 └──────────────────────────────────────────────────────────────┘
 ```
 
