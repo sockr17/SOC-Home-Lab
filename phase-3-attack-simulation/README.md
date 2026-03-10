@@ -33,7 +33,7 @@
 ## 📋 Table of Contents
 
 <details open>
-<summary><strong>🎯 Overview & Setup</strong></summary>
+<summary>📸 <strong>🎯 Overview & Setup</strong></summary>
 
 &nbsp;&nbsp;&nbsp;&nbsp;`01` [Project Overview](#1-project-overview)  
 &nbsp;&nbsp;&nbsp;&nbsp;`02` [Phase Objectives](#2-phase-objectives)  
@@ -44,7 +44,7 @@
 </details>
 
 <details open>
-<summary><strong>⚔️ Attack Simulations</strong></summary>
+<summary>📸 <strong>⚔️ Attack Simulations</strong></summary>
 
 &nbsp;&nbsp;&nbsp;&nbsp;`04` [Attack 1 — Brute Force Login](#4-attack-1--brute-force-login)  
 &nbsp;&nbsp;&nbsp;&nbsp;`05` [Attack 2 — Suspicious PowerShell Execution](#5-attack-2--suspicious-powershell-execution)  
@@ -55,7 +55,7 @@
 </details>
 
 <details open>
-<summary><strong>🔍 Analysis & Findings</strong></summary>
+<summary>📸 <strong>🔍 Analysis & Findings</strong></summary>
 
 &nbsp;&nbsp;&nbsp;&nbsp;`09` [Vulnerability Assessment](#9-vulnerability-assessment)  
 &nbsp;&nbsp;&nbsp;&nbsp;`10` [MITRE ATT&CK Coverage](#10-mitre-attck-coverage)  
@@ -192,36 +192,38 @@ The account lockout serves as both a **detection signal and a containment action
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Discover — clean baseline before attack</strong></summary>
+<summary>📸 <strong>Wazuh Discover — clean baseline before attack</strong></summary>
 
 <img src="screenshots/bruteforce/phase3_dashboard_ready.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell script execution — 20 failed login attempts</strong></summary>
+<summary>📸 <strong>PowerShell script execution — 20 failed login attempts</strong></summary>
 
 <img src="screenshots/bruteforce/bruteforce_powershell_executed.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Wazuh Discover — alert spike from 22 to 33</strong></summary>
+<summary>📸 <strong>Wazuh Discover — alert spike from 22 to 33</strong></summary>
 
 <img src="screenshots/bruteforce/bruteforce_alerts_wazuh.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Expanded alert detail — rule fields visible</strong></summary>
+<summary>📸 <strong>Expanded alert detail — rule fields visible</strong></summary>
 
 <img src="screenshots/bruteforce/bruteforce_alert_detail.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Windows Event Viewer — Event ID 4625 entries</strong></summary>
+<summary>📸 <strong>Windows Event Viewer — Event ID 4625 entries</strong></summary>
 
 <img src="screenshots/bruteforce/bruteforce_eventviewer_4625.png" width="900">
 
@@ -307,50 +309,52 @@ This is a real-world example of why **alert investigation matters** — a Level 
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Discover — baseline before attack</strong></summary>
+<summary>📸 <strong>Wazuh Discover — baseline before attack</strong></summary>
 
 <img src="screenshots/powershell/phase2_dashboard_baseline.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell commands 1 and 2 executed</strong></summary>
+<summary>📸 <strong>PowerShell commands 1 and 2 executed</strong></summary>
 
 <img src="screenshots/powershell/powershell_commands_executed1.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell commands 3 and 4 executed</strong></summary>
+<summary>📸 <strong>PowerShell commands 3 and 4 executed</strong></summary>
 
 <img src="screenshots/powershell/powershell_commands_executed2.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Wazuh Discover — full alert table</strong></summary>
+<summary>📸 <strong>Wazuh Discover — full alert table</strong></summary>
 
 <img src="screenshots/powershell/powershell_alerts_table.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Level 15 critical alert — file drop in Temp folder</strong></summary>
+<summary>📸 <strong>Level 15 critical alert — file drop in Temp folder</strong></summary>
 
 <img src="screenshots/powershell/powershell_level15_alert.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Expanded alert detail — rule fields and message visible</strong></summary>
+<summary>📸 <strong>Expanded alert detail — rule fields and message visible</strong></summary>
 
 <img src="screenshots/powershell/powershell_alert_detail.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Background noise example — Windows Update DLL flagged as DLL hijack</strong></summary>
+<summary>📸 <strong>Background noise example — Windows Update DLL flagged as DLL hijack</strong></summary>
 
 <img src="screenshots/powershell/background_noise_dll_alert.png" width="900">
 
@@ -432,29 +436,31 @@ Sysmon Event ID 1 entries confirmed the full parent-child chain — `parentImage
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Discover — baseline before attack</strong></summary>
+<summary>📸 <strong>Wazuh Discover — baseline before attack</strong></summary>
 
 <img src="screenshots/abnormal_process/phase3_dashboard_ready_abnormal.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell commands executed — process chains launched</strong></summary>
+<summary>📸 <strong>PowerShell commands executed — process chains launched</strong></summary>
 
 <img src="screenshots/abnormal_process/abnormal_process_commands_executed.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Wazuh Discover — 33 new alerts across 5 rule categories</strong></summary>
+<summary>📸 <strong>Wazuh Discover — 33 new alerts across 5 rule categories</strong></summary>
 
 <img src="screenshots/abnormal_process/abnormal_process_alerts_table.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Expanded alert — parent-child process chain visible in message field</strong></summary>
+<summary>📸 <strong>Expanded alert — parent-child process chain visible in message field</strong></summary>
 
 <img src="screenshots/abnormal_process/abnormal_process_alert_detail.png" width="900">
 
@@ -530,29 +536,31 @@ Rule 92302 specifically identified `reg.exe` as the modification tool — valuab
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Discover — baseline before attack</strong></summary>
+<summary>📸 <strong>Wazuh Discover — baseline before attack</strong></summary>
 
 <img src="screenshots/persistence/phase3_dashboard_ready_persistence.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell commands — registry run keys written</strong></summary>
+<summary>📸 <strong>PowerShell commands — registry run keys written</strong></summary>
 
 <img src="screenshots/persistence/persistence_commands_executed.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Wazuh Discover — 3 direct persistence alerts</strong></summary>
+<summary>📸 <strong>Wazuh Discover — 3 direct persistence alerts</strong></summary>
 
 <img src="screenshots/persistence/persistence_alerts_table.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Expanded Level 12 alert — registry key path visible in message</strong></summary>
+<summary>📸 <strong>Expanded Level 12 alert — registry key path visible in message</strong></summary>
 
 <img src="screenshots/persistence/persistence_alert_detail.png" width="900">
 
@@ -659,29 +667,31 @@ The Level 15 alerts were the same false positive pattern as INC-002 — the inli
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Discover — baseline before attack</strong></summary>
+<summary>📸 <strong>Wazuh Discover — baseline before attack</strong></summary>
 
 <img src="screenshots/privilege_escalation/phase3_dashboard_ready_privesc.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>PowerShell commands — token manipulation and LSASS access</strong></summary>
+<summary>📸 <strong>PowerShell commands — token manipulation and LSASS access</strong></summary>
 
 <img src="screenshots/privilege_escalation/privesc_commands_executed.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Wazuh Discover — alert table showing partial detection</strong></summary>
+<summary>📸 <strong>Wazuh Discover — alert table showing partial detection</strong></summary>
 
 <img src="screenshots/privilege_escalation/privesc_alerts_table.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>Expanded alert detail — process discovery and file drop events</strong></summary>
+<summary>📸 <strong>Expanded alert detail — process discovery and file drop events</strong></summary>
 
 <img src="screenshots/privilege_escalation/privesc_alert_detail.png" width="900">
 
@@ -735,15 +745,17 @@ Three of the six CVEs are privilege escalation vulnerabilities — directly rele
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh Vulnerability Detection — all 6 CVEs listed with severity</strong></summary>
+<summary>📸 <strong>Wazuh Vulnerability Detection — all 6 CVEs listed with severity</strong></summary>
 
 <img src="screenshots/phase3_vulnerabilities_overview.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>CVE detail — description and affected package visible</strong></summary>
+<summary>📸 <strong>CVE detail — description and affected package visible</strong></summary>
 
 <img src="screenshots/phase3_vulnerability_detail.png" width="900">
 
@@ -784,15 +796,17 @@ Privilege Escalation ██████████░░░░░░░░░�
 
 ### Screenshots
 
+<sub>📷 Click any screenshot below to expand</sub>
+
 <details>
-<summary><strong>Wazuh MITRE ATT&CK matrix — highlighted techniques from simulation</strong></summary>
+<summary>📸 <strong>Wazuh MITRE ATT&CK matrix — highlighted techniques from simulation</strong></summary>
 
 <img src="screenshots/phase3_mitre_matrix.png" width="900">
 
 </details>
 
 <details>
-<summary><strong>MITRE ATT&CK events view — technique IDs mapped to specific alerts</strong></summary>
+<summary>📸 <strong>MITRE ATT&CK events view — technique IDs mapped to specific alerts</strong></summary>
 
 <img src="screenshots/phase3_mitre_events.png" width="900">
 
