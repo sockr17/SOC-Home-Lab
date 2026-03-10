@@ -235,7 +235,7 @@ The account lockout serves as both a **detection signal and a containment action
 
 ✅ **True Positive** — Brute force attack fully detected across 3 escalating rule levels.
 
-> 📄 Full incident report: [`incident_reports/incident_reports.md#inc-001`](incident_reports/incident_reports.md)
+> 📄 Full incident report: [`incident_reports/README.md#inc-001`](incident_reports/README.md)
 
 ---
 
@@ -367,7 +367,7 @@ This is a real-world example of why **alert investigation matters** — a Level 
 ✅ **True Positive** — PowerShell abuse techniques detected across 8 rules including base64 encoding (Level 12) and process discovery.
 ⚠️ **False Positive identified** — Level 15 alert for `-ExecutionPolicy Bypass` policy test file. Investigated, explained, and documented.
 
-> 📄 Full incident report: [`incident_reports/incident_reports.md#inc-002`](incident_reports/incident_reports.md)
+> 📄 Full incident report: [`incident_reports/README.md#inc-002`](incident_reports/README.md)
 
 ---
 
@@ -472,7 +472,7 @@ Sysmon Event ID 1 entries confirmed the full parent-child chain — `parentImage
 
 ✅ **True Positive** — Full attack chain detected. Process spawning, discovery activity, and user enumeration all flagged across 5 distinct rules.
 
-> 📄 Full incident report: [`incident_reports/incident_reports.md#inc-003`](incident_reports/incident_reports.md)
+> 📄 Full incident report: [`incident_reports/README.md#inc-003`](incident_reports/README.md)
 
 ---
 
@@ -572,7 +572,7 @@ Rule 92302 specifically identified `reg.exe` as the modification tool — valuab
 
 ✅ **True Positive** — Persistence mechanism detected across 3 rules covering the action, the tool used, and the suspicious value pattern.
 
-> 📄 Full incident report: [`incident_reports/incident_reports.md#inc-004`](incident_reports/incident_reports.md)
+> 📄 Full incident report: [`incident_reports/README.md#inc-004`](incident_reports/README.md)
 
 ---
 
@@ -703,7 +703,7 @@ The Level 15 alerts were the same false positive pattern as INC-002 — the inli
 
 ⚠️ **Partial Detection** — Surrounding discovery activity caught but core token manipulation technique missed. Event ID 4672 detection gap identified and documented.
 
-> 📄 Full incident report: [`incident_reports/incident_reports.md#inc-005`](incident_reports/incident_reports.md)
+> 📄 Full incident report: [`incident_reports/README.md#inc-005`](incident_reports/README.md)
 
 ---
 
