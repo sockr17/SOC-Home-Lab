@@ -122,6 +122,8 @@ Output   →  5 incident reports · MITRE ATT&CK mappings · detection gap analy
 | Registry persistence mechanism | T1547.001 | Sysmon 13 | 3 | ✅ True Positive |
 | Privilege escalation | T1134 · T1134.001 | Sysmon 1 · 4672 | 7 | ⚠️ Partial — gap identified |
 
+> 📄 All 5 attacks are fully documented in [`/phase-3-attack-simulation/incident_reports/README.md`](./phase-3-attack-simulation/incident_reports/README.md) — including alert tables, triage notes, false positive analysis, detection gaps, and MITRE ATT&CK mappings.
+
 </details>
 
 <br>
