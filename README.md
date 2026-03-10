@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,100:003844&height=200&text=SOC%20Home%20Lab&fontSize=60&fontColor=00e5ff&fontAlignY=55&stroke=00bcd4&strokeWidth=2" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0a0a,100:0d1117&height=180&text=SOC%20HOME%20LAB&fontSize=58&fontColor=00ff41&fontAlignY=52&stroke=00ff41&strokeWidth=1&desc=%5B%20Endpoint%20Detection%20%7C%20Threat%20Simulation%20%7C%20Incident%20Investigation%20%5D&descSize=13&descAlignY=73&descFontColor=4a9a5a" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=3000&pause=1000&color=00bcd4&center=true&vCenter=true&width=700&lines=Endpoint+monitoring+%C2%B7+Sysmon+telemetry+%C2%B7+Live+alert+detection;Built+on+8GB+RAM+%E2%80%94+every+tradeoff+was+deliberate;Phase+3+incoming+%E2%80%94+attack+simulation+%26+incident+investigation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=3000&pause=1000&color=00ff41&center=true&vCenter=true&width=750&lines=%24+sudo+.%2Fwazuh-install.sh+-a+%E2%80%94+SIEM+deployed+successfully;%24+5+attacks+simulated+%7C+68+alerts+generated+%7C+5+incidents+documented;%24+wazuh-agent+status%3A+ACTIVE+%7C+sysmon%3A+RUNNING+%7C+pipeline%3A+OPERATIONAL;%24+all+endpoints+monitored.+no+alert+ignored." />
 </p>
 
 <br>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Phase%201-Complete-2ea44f?style=for-the-badge&labelColor=1a1a1a" />
-  <img src="https://img.shields.io/badge/Phase%202-Complete-2ea44f?style=for-the-badge&labelColor=1a1a1a" />
-  <img src="https://img.shields.io/badge/Phase%203-In%20Progress-f0a500?style=for-the-badge&labelColor=1a1a1a" />
+  <img src="https://img.shields.io/badge/Phase%201-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
+  <img src="https://img.shields.io/badge/Phase%202-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
+  <img src="https://img.shields.io/badge/Phase%203-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
 </p>
 
 <p align="center">
@@ -99,28 +99,28 @@ Stack    →  Wazuh Agent · Sysmon · SwiftOnSecurity config · Windows 10
 
 <br>
 
-<details>
-<summary>&nbsp;🔧 &nbsp;<strong>Phase 3 &nbsp;—&nbsp; Attack Simulation & SOC Investigation</strong>&nbsp; <em>(In Progress)</em></summary>
+<details open>
+<summary>&nbsp;✅ &nbsp;<strong>Phase 3 &nbsp;—&nbsp; Attack Simulation & SOC Investigation</strong></summary>
 
 <br>
 
 > 📁 [`/phase-3-attack-simulation`](./phase-3-attack-simulation)
 
-Simulating real attack techniques against the Windows endpoint. Each attack is investigated as a SOC analyst — from raw alert through to a documented incident report with MITRE ATT&CK mapping.
+Simulated 5 real attack techniques against the Windows endpoint. Each attack was investigated as a SOC analyst — from raw alert through to a documented incident report with MITRE ATT&CK mapping. Detection gaps and false positives were identified and documented.
 
 ```
 Target   →  Windows 10 VM · Sysmon telemetry · Wazuh agent
 Method   →  PowerShell scripts · manual attack techniques
-Output   →  Incident reports · MITRE ATT&CK mappings
+Output   →  5 incident reports · MITRE ATT&CK mappings · detection gap analysis
 ```
 
-| Simulation | MITRE Technique | Key Event IDs | Status |
-|---|---|---|---|
-| Brute force login attempts | T1110.001 | Windows 4625 | 🔧 Pending |
-| Suspicious PowerShell execution | T1059.001 | Sysmon 1 | 🔧 Pending |
-| Abnormal process execution | T1055 | Sysmon 1, 8 | 🔧 Pending |
-| Registry persistence mechanism | T1547.001 | Sysmon 13 | 🔧 Pending |
-| Privilege escalation | T1068 | Windows 4672 | 🔧 Pending |
+| Simulation | MITRE Technique | Key Event IDs | Alerts | Verdict |
+|---|---|---|---|---|
+| Brute force login attempts | T1110.001 | Windows 4625, 4740 | 11 | ✅ True Positive |
+| Suspicious PowerShell execution | T1059.001 · T1027 | Sysmon 1 · PS 4104 | 14 | ✅ TP + FP identified |
+| Abnormal process execution | T1059.003 · T1082 | Sysmon 1 | 33 | ✅ True Positive |
+| Registry persistence mechanism | T1547.001 | Sysmon 13 | 3 | ✅ True Positive |
+| Privilege escalation | T1134 · T1134.001 | Sysmon 1 · 4672 | 7 | ⚠️ Partial — gap identified |
 
 </details>
 
@@ -197,8 +197,6 @@ SOC-Home-Lab/
 │       ├── wazuh/
 │       ├── agent/
 │       └── attacks/
-│           ├── kali/
-│           └── dashboard/
 │
 ├── phase-2-windows-sysmon/
 │   ├── README.md
@@ -209,12 +207,13 @@ SOC-Home-Lab/
 └── phase-3-attack-simulation/
     ├── README.md
     ├── screenshots/
+    │   ├── bruteforce/
+    │   ├── powershell/
+    │   ├── abnormal_process/
+    │   ├── persistence/
+    │   └── privilege_escalation/
     └── incident_reports/
-        ├── incident_bruteforce.md
-        ├── incident_powershell.md
-        ├── incident_abnormal_process.md
-        ├── incident_persistence.md
-        └── incident_privilege_escalation.md
+        └── incident_reports.md
 ```
 
 ---
@@ -235,14 +234,14 @@ SOC-Home-Lab/
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:003844,100:0d1117&height=120&section=footer&fontColor=00e5ff&fontSize=14&text=All%20endpoints%20monitored.%20All%20logs%20analyzed.%20No%20alert%20ignored." />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:0a0a0a&height=100&section=footer&fontColor=00ff41&fontSize=13&text=%5BSOC-HOME-LAB%5D%20%24%20All%20phases%20complete.%20All%20endpoints%20monitored.%20No%20alert%20ignored.&stroke=00ff41&strokeWidth=1" />
 </p>
 
 <p align="center">
   <sub>
     <a href="./phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;·&nbsp;
     <a href="./phase-2-windows-sysmon">Phase 2: Windows + Sysmon</a> ✅ &nbsp;·&nbsp;
-    Phase 3: Attack Simulation 🔧
+    <a href="./phase-3-attack-simulation">Phase 3: Attack Simulation</a> ✅
     <br><br>
     <a href="https://github.com/kripy17">Krish Patel</a> &nbsp;·&nbsp; SOC Home Lab Series
   </sub>
