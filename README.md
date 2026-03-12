@@ -6,28 +6,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=3000&pause=1000&color=00ff41&center=true&vCenter=true&width=750&lines=%24+sudo+.%2Fwazuh-install.sh+-a+%E2%80%94+SIEM+deployed+successfully;%24+5+attacks+simulated+%7C+68+alerts+generated+%7C+5+incidents+documented;%24+wazuh-agent+status%3A+ACTIVE+%7C+sysmon%3A+RUNNING+%7C+pipeline%3A+OPERATIONAL;%24+all+endpoints+monitored.+no+alert+ignored." />
 </p>
 
-<br>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Phase%201-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
-  <img src="https://img.shields.io/badge/Phase%202-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
-  <img src="https://img.shields.io/badge/Phase%203-Complete-0056D2?style=for-the-badge&labelColor=1a1a1a" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Wazuh-SIEM-0056D2?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Sysmon-Telemetry-0056D2?style=for-the-badge&logo=windows&logoColor=white" />
-  <img src="https://img.shields.io/badge/VMware-Platform-607078?style=for-the-badge&logo=vmware&logoColor=white" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
-  <img src="https://img.shields.io/badge/Windows-10-0078D6?style=for-the-badge&logo=windows&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kali-Linux-268BEE?style=for-the-badge&logo=kali-linux&logoColor=white" />
-</p>
-
-<br>
-
 ---
 
 ## About
