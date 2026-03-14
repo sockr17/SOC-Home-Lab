@@ -487,6 +487,6 @@ This was the most important finding from a detection engineering perspective. A 
   <sub>
     <a href="../README.md">← Phase 3 README</a> &nbsp;·&nbsp;
     <a href="../../README.md">SOC Home Lab</a> &nbsp;·&nbsp;
-    <a href="https://github.com/kripy17">Krish Patel</a>
+    <a href="https://github.com/sockr17">Krish Patel</a>
   </sub>
 </p>
