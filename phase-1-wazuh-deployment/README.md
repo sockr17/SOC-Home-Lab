@@ -245,7 +245,7 @@ sudo apt upgrade -y
 <details>
 <summary>📸 <strong>Unnecessary snap packages removed</strong></summary>
 
-<img src="screenshots/ubuntu/useless_snaps.png" width="900">
+<img src="screenshots/ubuntu/usless_snaps.png" width="900">
 
 </details>
 
