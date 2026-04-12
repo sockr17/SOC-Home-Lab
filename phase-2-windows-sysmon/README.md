@@ -9,8 +9,8 @@
 [![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-0056D2?style=for-the-badge)](https://wazuh.com/)
 [![Sysmon](https://img.shields.io/badge/Sysmon-SwiftOnSecurity-darkgreen?style=for-the-badge)](https://github.com/SwiftOnSecurity/sysmon-config)
 [![VMware](https://img.shields.io/badge/VMware-Workstation-607078?style=for-the-badge&logo=vmware&logoColor=white)](https://www.vmware.com/)
-[![Phase](https://img.shields.io/badge/Series-Phase_2_of_3-8B0000?style=for-the-badge)](https://github.com/sockr17)
-[![Status](https://img.shields.io/badge/Status-Complete-0056D2?style=for-the-badge)](https://github.com/sockr17)
+[![Phase](https://img.shields.io/badge/Series-Phase_2_of_3-8B0000?style=for-the-badge)](https://github.com/kripy17)
+[![Status](https://img.shields.io/badge/Status-Complete-0056D2?style=for-the-badge)](https://github.com/kripy17)
 
 </p>
 
@@ -496,7 +496,7 @@ Phase 2 is complete. The SOC lab now has a fully operational Windows endpoint wi
 
 <p align="center">
   <sub>
-    Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/sockr17">Krish Patel</a><br><br>
+    Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/kripy17">Krish Patel</a><br><br>
     <a href="../phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;|&nbsp;
     <a href="../phase-2-windows-sysmon">Phase 2: Windows + Sysmon</a> ✅ &nbsp;|&nbsp;
     <a href="../phase-3-attack-simulation">Phase 3: Attack Simulation</a> ✅

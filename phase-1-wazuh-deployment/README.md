@@ -10,8 +10,8 @@
 [![Kali Linux](https://img.shields.io/badge/Kali_Linux-2023.3-blue?style=for-the-badge&logo=kali-linux&logoColor=white)](https://www.kali.org/)
 [![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-0056D2?style=for-the-badge&logo=wazuh&logoColor=white)](https://wazuh.com/)
 [![VMware](https://img.shields.io/badge/VMware-Workstation-607078?style=for-the-badge&logo=vmware&logoColor=white)](https://www.vmware.com/)
-[![Phase](https://img.shields.io/badge/Series-Phase_1_of_3-8B0000?style=for-the-badge)](https://github.com/sockr17)
-[![Status](https://img.shields.io/badge/Status-Complete-0056D2?style=for-the-badge)](https://github.com/sockr17)
+[![Phase](https://img.shields.io/badge/Series-Phase_1_of_3-8B0000?style=for-the-badge)](https://github.com/kripy17)
+[![Status](https://img.shields.io/badge/Status-Complete-0056D2?style=for-the-badge)](https://github.com/kripy17)
 
 </p>
 
@@ -68,7 +68,7 @@ The primary objective is to build a **fully functional SIEM environment** using 
 
 The environment is intentionally designed to operate under limited hardware resources (8 GB host RAM), requiring careful VM sizing and service optimization for stable performance. This project forms the **infrastructure foundation** of a larger SOC lab series and establishes a fully operational monitoring pipeline for future detection and investigation exercises.
 
-> 📌 **Back to portfolio:** [sockr17 – GitHub Profile](https://github.com/sockr17)
+> 📌 **Back to portfolio:** [kripy17 – GitHub Profile](https://github.com/kripy17)
 
 ---
 
@@ -753,7 +753,7 @@ The environment provides a solid and documented foundation for advanced detectio
 
 <p align="center">
   <sub>
-    Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/sockr17">Krish Patel</a><br><br>
+    Part of the <strong>SOC Home Lab Series</strong> by <a href="https://github.com/kripy17">Krish Patel</a><br><br>
     <a href="../phase-1-wazuh-deployment">Phase 1: SIEM Infrastructure</a> ✅ &nbsp;|&nbsp;
     <a href="../phase-2-windows-sysmon">Phase 2: Windows + Sysmon</a> ✅ &nbsp;|&nbsp;
     <a href="../phase-3-attack-simulation">Phase 3: Attack Simulation</a> ✅
